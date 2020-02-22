@@ -1,0 +1,16 @@
+---
+# This playbook installs OpenSSH 
+- name: Install OpenSSH (server and client)
+  win_shell: |
+    Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+    Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+    Start-Sleep -s 90
+    Set-Service sshd -StartupType Automatic
+    Set-Service ssh-agent -StartupType Automatic
+    Start-Service sshd
+    Start-Service ssh-agent
+    New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+  become: yes
+  become_method: runas
+  become_user: System
+  ignore_errors: true

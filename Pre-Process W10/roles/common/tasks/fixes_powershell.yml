@@ -1,0 +1,10 @@
+---
+# This playbook fixes PSReadLine module and upgrades Get-ChildItem to Get-ChildItemColor
+- name: Fix PSReadLine and upgrade Get-ChildItem to Get-ChildItemColor
+  win_shell: |
+    Set-ExecutionPolicy RemoteSigned -Force
+    Remove-Module PSReadLine
+    Remove-Item 'C:\Program Files\WindowsPowerShell\Modules\PSReadLine' -Force -Recurse
+    Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+    Install-Module PSReadLine -Force
+    Install-Module -AllowClobber Get-ChildItemColor -Force

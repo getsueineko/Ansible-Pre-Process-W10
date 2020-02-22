@@ -1,0 +1,67 @@
+---
+# This playbook installs basic software set for Windows Desktop
+- name: Install multiple packages sequentially
+  win_chocolatey:
+      name: '{{ item }}'
+      state: present
+  loop:
+  - directx
+  - dotnetfx
+  - vcredist140
+  - choco-cleaner
+  - ffmpeg
+  - curl
+  - 7zip
+  - powershell-core
+  - adobereader
+  - mpc-be
+  - honeyview
+  - mpv
+  - youtube-dl
+  - paint.net
+  - googlechrome
+  register: command_result
+
+- name: Fix for broken sequential install
+  win_shell: |
+    choco install directx dotnetfx vcredist140 choco-cleaner ffmpeg curl 7zip powershell-core adobereader mpc-be honeyview mpv youtube-dl paint.net googlechrome -y
+  when: 
+    - '"not installed" in command_result'
+
+- name: Create directory structure
+  win_file:
+    path: C:\Temp
+    state: directory
+
+- name: Disable WinDefenderRealtimeMonitoring
+  win_shell: |
+    Set-MpPreference -DisableRealtimeMonitoring $true
+  ignore_errors: true 
+
+- name: Download RDPWrapper to specified path from YD
+  win_shell: |
+    cd C:\Temp
+    curl -o RDPWrapper-1.6.3.zip https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/1ZO_CZVWR7Ry9Q
+
+- name: Unzip the RDPWrapper-1.6.3.zip file
+  win_unzip:
+    src: C:\Temp\RDPWrapper-1.6.3.zip
+    dest: C:\Temp\RDPWrapper
+    creates: C:\Temp\RDPWrapper
+
+- name: Install RDPWrapper
+  win_shell: |
+    cd C:\Temp\RDPWrapper
+    .\RDPWInst.exe -i -o
+    .\update.bat
+  ignore_errors: true
+
+- name: Enable WinDefenderRealtimeMonitoring
+  win_shell: |
+    Set-MpPreference -DisableRealtimeMonitoring $false
+  ignore_errors: true
+
+- name: Clean temp files
+  win_shell: |
+    Remove-Item "C:\Temp\RDPWrapper" -Force -Recurse -ErrorAction SilentlyContinue
+    Remove-Item "C:\Temp\RDPWrapper-1.6.3.zip" -Force -ErrorAction SilentlyContinue

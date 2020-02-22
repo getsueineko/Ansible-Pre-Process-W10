@@ -1,0 +1,19 @@
+---
+# This playbook deploys Chocolatey
+- name: Check for existing chocolatey install
+  win_stat:
+    path: "C:/ProgramData/chocolatey/choco.exe"
+  register: chocolatey_exe
+    
+- name: Install latest Chocolatey
+  win_chocolatey:
+    name: git
+    source: https://chocolatey.org/api/v2/
+  when:
+  - chocolatey_exe.stat.exists is defined
+  - not chocolatey_exe.stat.exists
+
+- name: Add Chocolatey Source to Trusted
+  win_shell: |
+    Install-PackageProvider chocolatey -Force
+    Set-PackageSource -Name chocolatey -Trusted

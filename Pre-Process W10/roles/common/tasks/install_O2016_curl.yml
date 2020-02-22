@@ -1,0 +1,23 @@
+---
+# This playbook deploys O2016. External Source
+- name: Download the Office2016.zip file from YD
+  win_shell: |
+    cd C:\Temp
+    curl -o Office2016.zip https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/2eXWCGfx6bLWIg
+
+- name: Unzip the Office2016.zip file
+  win_unzip:
+    src: C:\Temp\Office2016.zip
+    dest: C:\Temp\Office2016
+    creates: C:\Temp\Office2016
+
+- name: Install Office2016
+  win_shell: |
+    cd C:\Temp\Office2016
+    .\setup.exe
+  ignore_errors: true
+
+- name: Clean temp files
+  win_shell: |
+    Remove-Item "C:\Temp\Office2016" -Force -Recurse -ErrorAction SilentlyContinue
+    Remove-Item "C:\Temp\Office2016.zip" -Force -ErrorAction SilentlyContinue

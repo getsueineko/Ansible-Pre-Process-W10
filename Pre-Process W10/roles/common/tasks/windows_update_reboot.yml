@@ -1,0 +1,16 @@
+---
+# This playbook installs all updates
+- name: Install all critical and security updates
+  win_updates:
+      category_names:
+      - CriticalUpdates
+      - SecurityUpdates
+      - UpdateRollups
+      server_selection: windows_update
+  register: update_result
+
+- name: Reboot host if required after install updates
+  win_reboot:
+    msg: "Внимание! Система обновлена, сейчас будет произведена перезагрузка компьютера"
+    reboot_timeout: 3600
+  when: update_result.reboot_required

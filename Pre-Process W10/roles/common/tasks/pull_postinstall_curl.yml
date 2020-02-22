@@ -1,0 +1,17 @@
+---
+# This playbook pulls and unzips PostInstall. External Source
+- name: Download the PostInstall.zip file from YD
+  win_shell: |
+    cd C:\Temp
+    curl -o PostInstall.zip https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/o_MiecJuAIhYfg
+
+- name: Unzip the PostInstall.zip file
+  win_unzip:
+    src: C:\Temp\PostInstall.zip
+    dest: C:\
+    creates: C:\PostInstall
+
+- name: Clean temp files
+  win_shell: |
+    Remove-Item "C:\Temp\PostInstall" -Force -Recurse -ErrorAction SilentlyContinue
+    Remove-Item "C:\Temp\PostInstall.zip" -Force -ErrorAction SilentlyContinue

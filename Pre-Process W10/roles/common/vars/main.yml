@@ -1,0 +1,6 @@
+w10key: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          # result of command ansible-vault encrypt_string "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+o16key: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          # result of command ansible-vault encrypt_string "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"

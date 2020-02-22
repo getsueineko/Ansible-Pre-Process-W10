@@ -1,0 +1,7 @@
+---
+# This playbook deploys MS Edge Chromium
+- name: Download and install MS Edge Chromium
+  win_package:
+    path: http://dl.delivery.mp.microsoft.com/filestreamingservice/files/0af31313-0430-454d-908a-d55ce3df7b69/MicrosoftEdgeEnterpriseX64.msi
+    product_id: '{5E0AAB60-F21F-4933-9403-E6BF128D5022}'
+    state: present

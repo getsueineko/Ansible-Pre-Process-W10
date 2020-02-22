@@ -1,0 +1,14 @@
+- include: fixes_powershell.yml
+- include: install_choco.yml
+- include: choco_install_basicset.yml
+- include: install_basicfeatures.yml
+- include: install_openssh.yml
+- include: install_msedge.yml
+- include: install_fonts_curl.yml
+- include: install_O2016_curl.yml
+- include: pull_postinstall_curl.yml
+- include: setup_powercfg_modes.yml
+- include: clean_systemdrive.yml
+- include: activate_win_and_office_encrypted.yml
+- include: windows_update_reboot.yml
+

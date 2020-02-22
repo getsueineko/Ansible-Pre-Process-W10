@@ -1,0 +1,14 @@
+---
+# This playbook installs basic features for Windows Desktop
+- name: Install multiple features in one task
+  win_optional_feature:
+      name:
+      - NetFx3
+      - LegacyComponents
+      - Directplay
+      - TelnetClient
+      - TFTP
+      state: present
+  become: yes
+  become_method: runas
+  become_user: System

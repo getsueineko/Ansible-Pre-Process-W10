@@ -1,0 +1,12 @@
+---
+# This playbook setups powercfg modes
+- name: Activate ultimate power plan
+  raw: powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+
+- name: Change power plan to high performance
+  win_power_plan:
+    name: Высокая производительность
+
+- name: Disable hibernate
+  raw: powercfg -h off
+

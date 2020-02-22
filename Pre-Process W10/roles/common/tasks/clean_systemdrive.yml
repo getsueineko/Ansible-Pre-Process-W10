@@ -1,0 +1,6 @@
+---
+# This playbook removes all contents exclude default deploy system
+- name: Clean the SystemDrive
+  win_shell: |
+    Set-Volume -DriveLetter C -NewFileSystemLabel "System"
+    Get-Item C:\* -Force -Exclude Program*, *.sys, *Bin, Docum*, Post*, too*, User*, Window*, System*, Recov*, bootmgr | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue

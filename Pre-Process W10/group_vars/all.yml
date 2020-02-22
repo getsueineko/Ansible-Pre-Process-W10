@@ -1,0 +1,15 @@
+---
+ansible_user: Ansible #Local Admin
+ansible_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          # result of command ansible-vault encrypt_string "Pa$$w0rd"
+ansible_port: 5985
+ansible_connection: winrm
+ansible_winrm_transport: credssp
+ansible_winrm_server_cert_validation: ignore
+domain: "contoso.com"
+netbios_domain: "contoso"
+domain_admin: "AnsibleNet@{{ domain }}"
+domain_admin_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          # result of command ansible-vault encrypt_string "Pa$$w0rd"

@@ -1,0 +1,23 @@
+---
+# This playbook installs Powerline Fonts. External Source
+- name: Download Fonts.zip from YD
+  win_shell: |
+    cd C:\Temp
+    curl -o Fonts.zip https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/yTY7gaNIlOG34Q
+
+- name: Unzip the Fonts.zip file
+  win_unzip:
+    src: C:\Temp\Fonts.zip
+    dest: C:\Temp\Fonts
+    creates: C:\Temp\Fonts
+
+- name: Install Fonts
+  win_shell: |
+    cd C:\Temp\Fonts
+    .\FontInstallation.ps1
+  ignore_errors: true
+
+- name: Clean temp files
+  win_shell: |
+    Remove-Item "C:\Temp\Fonts" -Force -Recurse -ErrorAction SilentlyContinue
+    Remove-Item "C:\Temp\Fonts.zip" -Force -ErrorAction SilentlyContinue

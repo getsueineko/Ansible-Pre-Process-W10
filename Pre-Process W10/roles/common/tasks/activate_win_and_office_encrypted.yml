@@ -1,0 +1,21 @@
+---
+# This playbook acivates Windows 10 and Office 2016
+- name: Set Windows Key
+  win_shell: cscript slmgr.vbs /ipk {{ w10key }}
+  args:
+    chdir: C:\Windows\System32\
+
+- name: Activate Windows
+  win_shell: cscript slmgr.vbs /ato
+  args:
+    chdir: C:\Windows\System32\
+
+- name: Set Office 2016 Key
+  win_shell: cscript ospp.vbs /inpkey:{{ o16key }}
+  args:
+    chdir: 'C:\Program Files\Microsoft Office\Office16\'
+
+- name: Activate Office 2016
+  win_shell: cscript ospp.vbs /act
+  args:
+    chdir: 'C:\Program Files\Microsoft Office\Office16\'
