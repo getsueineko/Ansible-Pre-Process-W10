@@ -1,4 +1,4 @@
-## Pre-Process W10 (auto tuning Windows 10)
+## Pre-Process W10 (auto-tuning Windows 10)
 ---
 Данная ansible-role позволяет произвести ряд послеинсталяционных манипуляций над свежеустановленной Windows 10 Pro для настройки базового рабочего окружения дома или на предприятии.
 
