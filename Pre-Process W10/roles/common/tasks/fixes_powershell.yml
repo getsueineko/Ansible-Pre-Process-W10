@@ -8,3 +8,6 @@
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
     Install-Module PSReadLine -Force
     Install-Module -AllowClobber Get-ChildItemColor -Force
+
+- name: Disable POWERSHELL_TELEMETRY
+  raw: setx /M POWERSHELL_TELEMETRY_OPTOUT 1

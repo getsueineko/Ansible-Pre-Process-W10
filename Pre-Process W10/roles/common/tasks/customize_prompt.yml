@@ -1,0 +1,32 @@
+---
+# This playbook customizing PS and CMD Prompt
+- name: Customizing Powershell Prompt
+  win_copy:
+    src: files/ps/
+    dest: C:\Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell
+
+- name: Customizing Command Prompt
+  win_copy:
+    src: files/cmd/
+    dest: C:\Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools
+
+- name: Set Dracula theme to Command Prompt for .Default
+  win_regedit:
+    path: HKU:\.DEFAULT\Environment
+    name: prompt
+    data: $E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m
+    type: string
+
+#- name: Set Dracula theme to Command Prompt for Current User (Get User with whoami if you want)
+#  win_regedit:
+#    path: HKU:\S-1-5-21-1698553502-191469920-4042933932-1331\Environment
+#    name: prompt
+#    data: $E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m
+#    type: string
+
+- name: Set Dracula theme to System Command Prompt
+  raw: setx /M prompt '$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m'
+  become: yes
+  become_method: runas
+  become_user: System
+  ignore_errors: true
