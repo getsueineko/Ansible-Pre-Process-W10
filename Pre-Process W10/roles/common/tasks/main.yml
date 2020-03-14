@@ -5,6 +5,7 @@
 - include: install_openssh.yml
 - include: install_msedge.yml
 - include: install_fonts_curl.yml
+- include: customize_prompt.yml
 - include: install_O2016_curl.yml
 - include: pull_postinstall_curl.yml
 - include: setup_powercfg_modes.yml
