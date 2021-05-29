@@ -3,6 +3,7 @@
 - include: choco_install_basicset.yml
 - include: install_basicfeatures.yml
 - include: install_openssh.yml
+- include: uninstall_wordpad_mspaint.yml
 - include: install_msedge.yml
 - include: install_fonts_curl.yml
 - include: customize_prompt.yml
@@ -12,4 +13,3 @@
 - include: clean_systemdrive.yml
 - include: activate_win_and_office_encrypted.yml
 - include: windows_update_reboot.yml
-
