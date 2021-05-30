@@ -3,7 +3,7 @@
 - name: Download the Office2016.zip file from YD
   win_shell: |
     cd C:\Temp
-    curl -o Office2016.zip https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/2eXWCGfx6bLWIg
+    curl -o Office2016.zip https://getfile.dokpub.com/yandex/get/https://disk.yandex.ru/d/1FqNNgRyM-auaQ
 
 - name: Unzip the Office2016.zip file
   win_unzip:
