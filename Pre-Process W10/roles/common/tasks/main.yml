@@ -9,6 +9,8 @@
 - include: customize_prompt.yml
 - include: install_O2016_curl.yml
 - include: pull_postinstall_curl.yml
+- include: pin_office_apps.yml
+- include: set_default_file_associations.yml
 - include: setup_powercfg_modes.yml
 - include: clean_systemdrive.yml
 - include: activate_win_and_office_encrypted.yml
