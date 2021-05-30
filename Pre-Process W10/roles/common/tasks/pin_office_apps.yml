@@ -1,0 +1,4 @@
+---
+# This playbook changes layout of Start Menu
+- name: Pin-OfficeSet
+  win_shell: C:\PostInstall\AutoGroupTitles\Pin-OfficeSet.ps1
