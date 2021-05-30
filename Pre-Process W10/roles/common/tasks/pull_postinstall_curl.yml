@@ -3,7 +3,7 @@
 - name: Download the PostInstall.zip file from YD
   win_shell: |
     cd C:\Temp
-    curl -o PostInstall.zip https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/o_MiecJuAIhYfg
+    curl -o PostInstall.zip https://getfile.dokpub.com/yandex/get/https://disk.yandex.ru/d/J4N-voAy3i2_Yg
 
 - name: Unzip the PostInstall.zip file
   win_unzip:
