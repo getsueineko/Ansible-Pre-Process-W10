@@ -39,7 +39,7 @@ The role has a modular structure, which makes it easy to customize the desired r
 15. _Set-Default-FileAssociations.yml_ - Set Default FileAssociations(using xml from PostInstall Folder)
 16. _Setup-Powercfg-Modes.yml_ - Setup Powercfg Modes like High and Max Perfomance (set default high profile)
 17. _Clean-SystemDrive.yml_ - Clean temp files
-18. _Activate-Win-Office-(encrypted).yml_ - Activate Win Office (non including real keys)
+18. _Activate-Win-Office-(encrypted).yml_ - Activate Windows and Office (non including real keys)
 19. _Install-Win-Updates-(reboot).yml_ - Install Windows 10 Updates and reboot with notify
 
 TODO List:
