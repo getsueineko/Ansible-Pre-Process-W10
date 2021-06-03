@@ -1,5 +1,10 @@
 ---
 # This playbook pulls and unzips PostInstall. External Source
+- name: Create Temp directory
+  win_file:
+    path: C:\Temp
+    state: directory
+    
 - name: Download the PostInstall.zip file from YD
   win_shell: |
     cd C:\Temp
