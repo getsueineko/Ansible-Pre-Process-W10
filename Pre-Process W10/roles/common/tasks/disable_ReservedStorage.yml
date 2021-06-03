@@ -1,5 +1,5 @@
 ---
-# This playbook sets default file associations
+# This playbook disables Reserved Storage for updates
 - name: Set Default File Associations
   win_shell: |
     dism /Online /Set-ReservedStorageState /State:Disabled
