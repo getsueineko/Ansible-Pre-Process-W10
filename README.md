@@ -19,7 +19,7 @@ The role has a modular structure, which makes it easy to customize the desired r
 3. Modify tasks for run via ```nano '.\Pre-Process W10\roles\common\tasks\Main.yml'```
 4. Run ```ansible-playbook pre-process.yml -vvv```
 
-## A brief description of the manipulations:
+## A brief description of the tasks:
 
 1.  Install-addtl-pwsh-PackageSources-and-Modules.yml - Add Chocolatey and PowerShellGet PackageSources and install some modules like oh-my-posh and Get-ChildItemColor
 2.  Fixes-PowerShell.yml - Fix bug with capital letters in the PSReadline module and disable powershell telemetry
