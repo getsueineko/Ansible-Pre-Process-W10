@@ -3,7 +3,7 @@
 The Ansible-Role allows you to perform a series of post-installation manipulations on a freshly installed Windows 10 Pro to configure the basic working environment at home or in the enterprise.
 
 [![License](https://github.com/getsueineko/Ansible-Pre-Process-W10/blob/master/license.svg)](LICENSE)
-[![Drone](https://github.com/getsueineko/Ansible-Pre-Process-W10/blob/master/status.svg)](link)
+[![Drone](https://github.com/getsueineko/Ansible-Pre-Process-W10/blob/master/status.svg)](https://github.com/getsueineko/Ansible-Pre-Process-W10/releases)
 
 The role has a modular structure, which makes it easy to customize the desired result, or continue to modify it for yourself.
 
@@ -13,14 +13,14 @@ The role has a modular structure, which makes it easy to customize the desired r
 - [Installation and Usage Guides](https://github.com/getsueineko/Ansible-Pre-Process-W10#installation-and-usage)
 
 ## Installation and Usage
+
 1. ```git clone https://github.com/getsueineko/Ansible-Pre-Process-W10.git```
 2. Modify inventory file ```nano inventory.yml```
 3. Modify tasks for run via ```nano '.\Pre-Process W10\roles\common\tasks\Main.yml'```
 4. Run ```ansible-playbook pre-process.yml -vvv```
 
----
+## A brief description of the manipulations:
 
-A brief description of the manipulations:
 1.  Install-addtl-pwsh-PackageSources-and-Modules.yml - Add Chocolatey and PowerShellGet PackageSources and install some modules like oh-my-posh and Get-ChildItemColor
 2.  Fixes-PowerShell.yml - Fix bug with capital letters in the PSReadline module and disable powershell telemetry
 3.  Disable-ReservedStorage.yml - Disable Reserved Storage (reserving disk space for future updates)
