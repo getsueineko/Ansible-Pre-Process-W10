@@ -1,4 +1,5 @@
 - include: fixes_powershell.yml
+- include: disable_ReservedStorage.yml
 - include: install_choco.yml
 - include: choco_install_basicset.yml
 - include: install_basicfeatures.yml
