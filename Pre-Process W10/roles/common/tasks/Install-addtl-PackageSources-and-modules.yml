@@ -1,0 +1,11 @@
+---
+# This playbook adds PackageSources, upgrades Get-ChildItem to Get-ChildItemColor and installs oh-my-posh
+- name: Adding chocolatey and PowerShellGet as trusted PackageSources and installing oh-my-posh and Get-ChildItemColor
+  win_shell: |
+    Set-ExecutionPolicy RemoteSigned -Force
+    Install-PackageProvider chocolatey
+    Set-PackageSource -Name chocolatey -Trusted
+    Install-PackageProvider PowerShellGet
+    Set-PackageSource -Name chocolatey -Trusted
+    Install-Module oh-my-posh -Scope AllUsers
+    Install-Module -AllowClobber Get-ChildItemColor -Scope AllUsers -Force
