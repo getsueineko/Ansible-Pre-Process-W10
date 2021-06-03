@@ -18,18 +18,25 @@ The role has a modular structure, which makes it easy to customize the desired r
 ---
 
 A brief description of the manipulations:
- 1.  Bug fix with capital letters in the PSReadline module and upgrade of the Get-ChildItem module to Get-ChildItemColor
- 2.  Installing Chocolatey Package Manager
- 3.  Installing some of the basic components of Windows 10 Pro
- 4.  Installing OpenSSH Server and Client
- 5.  Installing MS Edge Chromium (not necessary on versions 20H1 and higher)
- 6.  Installing some Powerline fonts (support cyrillic)
- 7.  Installing MS Office 2016
- 8.  Installing some of post-installation utilities
- 9.  Activation and installation of power schemes
- 10. Cleaning and renaming a system drive 
- 11. Activating Windows 10 Pro and Office 2016
- 12. Installing updates 
+1.  Install-addtl-pwsh-PackageSources-and-Modules.yml - Add Chocolatey and PowerShellGet PackageSources and install some modules like oh-my-posh and Get-ChildItemColor
+2.  Fixes-PowerShell.yml - Fix bug with capital letters in the PSReadline module and disable powershell telemetry
+3.  Disable-ReservedStorage.yml - Disable Reserved Storage (reserving disk space for future updates)
+4.  Install-Chocolatey.yml - Install package manager Chocolatey
+5.  Cinst-BasicSet-Software.yml - Install some basic program for work
+6.  Install-Win-BasicFeatures.yml - Install basic features like - NetFx3, LegacyComponents, Directplay, TelnetClient, TFTP
+7.  Install-OpenSSH.yml - Install OpenSSH (server and client)
+8.  Uninstall-Wordpad-MSPaint.yml - Uninstall some legacy components like Wordpad and MSPaint
+9.  Install-MSEdge.yml - Install MSEdge (for old win10 releases)
+10. Install-Fonts-(curl).yml - Install some useful fonts
+11. Customize-Prompt.yml - Customize Prompt (powershell and cmd)
+12. Install-Office-(curl).yml - Install Office (default - 2016)
+13. Pull-PostInstall-Folder-(curl).yml - Download PostInstall Folder contains some useful utilities
+14. Pin-StartMenu-Apps.yml - Pin StartMenu Apps (using xml from PostInstall Folder)
+15. Set-Default-FileAssociations.yml - Set Default FileAssociations(using xml from PostInstall Folder)
+16. Setup-Powercfg-Modes.yml - Setup Powercfg Modes like High and Max Perfomance (set default high profile)
+17. Clean-SystemDrive.yml - Clean temp files
+18. Activate-Win-Office-(encrypted).yml - Activate Win Office (non including real keys)
+19. Install-Win-Updates-(reboot).yml - Install Windows 10 Updates and reboot with notify
 
 TODO List:
 - [Show system desktop icons for all users ]
