@@ -1,3 +1,4 @@
+- include: Install-addtl-pwsh-PackageSources-and-modules.yml
 - include: fixes_powershell.yml
 - include: disable_ReservedStorage.yml
 - include: install_choco.yml
