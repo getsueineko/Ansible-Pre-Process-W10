@@ -9,8 +9,8 @@ The role has a modular structure, which makes it easy to customize the desired r
 
 ## Get started
 
-- [Get Pre-Process W10](link)
-- [Installation and Usage Guides](link)
+- [Get Pre-Process W10](https://github.com/getsueineko/Ansible-Pre-Process-W10.git)
+- [Installation and Usage Guides](https://github.com/getsueineko/Ansible-Pre-Process-W10#installation-and-usage)
 
 ## Installation and Usage
 1. ```git clone https://github.com/getsueineko/Ansible-Pre-Process-W10.git```
