@@ -18,7 +18,7 @@ The role has a modular structure, which makes it easy to customize the desired r
 2. Modify inventory file: ```nano inventory.yml```
 3. Modify var file for access to target host: ```/group_vars/all.yml```
 4. Modify tasks for run: ```nano /Pre-Process W10/roles/common/tasks/Main.yml'```
-5. Run ```ansible-playbook pre-process.yml -v```, where number of v is extent of details output — -v - less details, -vv - more details, -vvv - very details
+5. Run ```ansible-playbook pre-process.yml -v```, where number of v is extent of details output: -v - less details, -vv - more details, -vvv - very details
 
 ## The brief description of the tasks:
 
