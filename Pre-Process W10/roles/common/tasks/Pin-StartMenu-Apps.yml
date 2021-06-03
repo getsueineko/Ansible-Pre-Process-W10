@@ -1,4 +1,10 @@
 ---
 # This playbook changes layout of Start Menu
+- name: Check that the Pin-OfficeSet.ps1 exists
+  win_stat: 
+    path: C:\PostInstall\AutoGroupTitles\Pin-OfficeSet.ps1 
+  register: stat_file
+ 
 - name: Pin-OfficeSet
   win_shell: C:\PostInstall\AutoGroupTitles\Pin-OfficeSet.ps1
+  when: stat_file.stat.exists == True
