@@ -6,7 +6,7 @@
     Remove-Module PSReadLine
     Remove-Item 'C:\Program Files\WindowsPowerShell\Modules\PSReadLine' -Force -Recurse
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-Module PSReadLine -Force
+    Install-Module -Name PSReadLine -RequiredVersion 2.1.0 -Scope AllUsers -Force
     
 - name: Disable POWERSHELL_TELEMETRY
   raw: setx /M POWERSHELL_TELEMETRY_OPTOUT 1
