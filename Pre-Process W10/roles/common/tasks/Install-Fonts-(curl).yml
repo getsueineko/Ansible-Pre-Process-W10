@@ -9,7 +9,7 @@
   win_file:
     path: C:\Temp
     state: directory
-  when: folder_info.stat.exists == True
+  when: folder_info.stat.exists == False
   
 - name: Download Fonts.zip from YD
   win_shell: |
