@@ -1,5 +1,16 @@
 ---
 # This playbook installs Powerline Fonts. External Source
+- name: Obtain information about the folder Temp
+  win_stat:
+    path: C:\Temp
+  register: folder_info
+  
+- name: Create Temp directory
+  win_file:
+    path: C:\Temp
+    state: directory
+  when: folder_info.stat.exists == True
+  
 - name: Download Fonts.zip from YD
   win_shell: |
     cd C:\Temp
