@@ -9,3 +9,7 @@
     Set-PackageSource -Name PowerShellGet -Trusted
     Install-Module oh-my-posh -Scope AllUsers
     Install-Module -AllowClobber Get-ChildItemColor -Scope AllUsers -Force
+  become: yes
+  become_method: runas
+  become_user: System
+  ignore_errors: true
