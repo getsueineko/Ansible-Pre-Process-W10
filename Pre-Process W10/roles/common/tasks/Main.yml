@@ -1,4 +1,4 @@
-- include: Install-addtl-pwsh-PackageSources-and-modules.yml
+- include: Install-addtl-pwsh-PackageSources-and-Modules.yml
 - include: Fixes-PowerShell.yml
 - include: Disable-ReservedStorage.yml
 - include: Install-Chocolatey.yml
