@@ -4,7 +4,6 @@ The Ansible-Role allows you to perform a series of post-installation manipulatio
 
 [![License](https://github.com/getsueineko/Ansible-Pre-Process-W10/blob/master/license.svg)](LICENSE)
 [![Drone](https://github.com/getsueineko/Ansible-Pre-Process-W10/blob/master/status.svg)](link)
-[![Go Report Issues](https://goreportcard.com/badge/github.com/grafana/grafana)](https://github.com/getsueineko/Ansible-Pre-Process-W10/issues)
 
 The role has a modular structure, which makes it easy to customize the desired result, or continue to modify it for yourself.
 
