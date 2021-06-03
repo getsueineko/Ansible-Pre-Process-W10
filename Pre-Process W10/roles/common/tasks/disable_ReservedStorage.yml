@@ -1,0 +1,5 @@
+---
+# This playbook sets default file associations
+- name: Set Default File Associations
+  win_shell: |
+    dism /Online /Set-ReservedStorageState /State:Disabled
