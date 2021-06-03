@@ -6,5 +6,6 @@
   register: stat_file
  
 - name: Pin-OfficeSet
-  win_shell: C:\PostInstall\AutoGroupTitles\Pin-OfficeSet.ps1
+  win_shell: |
+    C:\PostInstall\AutoGroupTitles\Pin-OfficeSet.ps1
   when: stat_file.stat.exists == True
