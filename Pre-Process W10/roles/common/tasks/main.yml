@@ -6,7 +6,7 @@
 - include: Install-Win-BasicFeatures.yml
 - include: Install-OpenSSH.yml
 - include: Uninstall-Wordpad-MSPaint.yml
-#- include: Install-MSEdge.yml
+#- include: Install-MSEdge-(old).yml
 - include: Install-Fonts-(curl).yml
 - include: Customize-Prompt.yml
 - include: Install-Office-(curl).yml
