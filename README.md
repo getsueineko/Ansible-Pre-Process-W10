@@ -1,33 +1,22 @@
 ## Pre-Process W10 (auto-tuning Windows 10)
----
-Данная ansible-role позволяет произвести ряд послеинсталяционных манипуляций над свежеустановленной Windows 10 Pro для настройки базового рабочего окружения дома или на предприятии.
 
-Role имеет модульную структуру, что позволяет легко настраивать желаемый результат, или продолжить ее модифицировать под себя.
+The Ansible-Role allows you to perform a series of post-installation manipulations on a freshly installed Windows 10 Pro to configure the basic working environment at home or in the enterprise.
 
-Краткое описание производимых манипуляций:
- 1.  Исправление ошибки с заглавными буквами модуля PSReadline и апгрейд Get-ChildItem до Get-ChildItemColor 
- 2.  Установка пакетного менеджера Chocolatey
- 3.  Установка некоторых базовых компонентов Windows 10 Pro
- 4.  Установка OpenSSH сервера и клиента
- 5.  Установка MS Edge Chromium (не нужно на версиях 20H1 и выше)
- 6.  Установка некоторых Powerline шрифтов (c поддержкой кириллицы)
- 7.  Установка MS Office 2016
- 8.  Установка пакета необходмых поста-инсталл утилит
- 9.  Активация и установка схем электропитания
- 10. Очистка и переименовывание системного диска
- 11. Активация Windows 10 Pro и Office 2016
- 12. Установка обновлений
-
-Лист того, что необходимо еще сделать:
-- [Отображения системных иконок на рабочем столе для всех пользователей]
-- [Нейтральная цветовая схема для всех пользователей] 
-- [ ] 
-
----
-
-This ansible-role allows you to perform a series of post-installation manipulations on a freshly installed Windows 10 Pro to configure the basic working environment at home or in the enterprise.
+[![License](https://github.com/getsueineko/Ansible-Pre-Process-W10/blob/master/license.svg)](LICENSE)
+[![Drone](https://github.com/getsueineko/Ansible-Pre-Process-W10/blob/master/status.svg)](link)
+[![Go Report Issues](https://goreportcard.com/badge/github.com/grafana/grafana)](https://github.com/getsueineko/Ansible-Pre-Process-W10/issues)
 
 The role has a modular structure, which makes it easy to customize the desired result, or continue to modify it for yourself.
+
+## Get started
+
+- [Get Pre-Process W10](link)
+- [Installation guides](link)
+
+## Usage
+
+
+---
 
 A brief description of the manipulations:
  1.  Bug fix with capital letters in the PSReadline module and upgrade of the Get-ChildItem module to Get-ChildItemColor
@@ -47,3 +36,7 @@ TODO List:
 - [Show system desktop icons for all users ]
 - [Neutral color scheme for all users] 
 - [ ] 
+
+## License
+
+Pre-Process W10 is distributed under [AGPL-3.0-only](LICENSE).
