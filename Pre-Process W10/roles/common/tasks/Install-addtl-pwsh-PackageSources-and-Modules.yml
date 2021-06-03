@@ -6,6 +6,6 @@
     Install-PackageProvider chocolatey
     Set-PackageSource -Name chocolatey -Trusted
     Install-PackageProvider PowerShellGet
-    Set-PackageSource -Name chocolatey -Trusted
+    Set-PackageSource -Name PowerShellGet -Trusted
     Install-Module oh-my-posh -Scope AllUsers
     Install-Module -AllowClobber Get-ChildItemColor -Scope AllUsers -Force
