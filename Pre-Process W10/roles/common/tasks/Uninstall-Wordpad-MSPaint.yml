@@ -1,10 +1,9 @@
 ---
 # This playbook removes WordPad and MSPaint
-- name: Install OpenSSH (server and client)
+- name: Remove WordPad and MSPaint
   win_shell: |
     Remove-WindowsCapability -Online -Name Microsoft.Windows.WordPad~~~~0.0.1.0
     Remove-WindowsCapability -Online -Name Microsoft.Windows.MSPaint~~~~0.0.1.0
-Protocol TCP -Action Allow -LocalPort 22
   become: yes
   become_method: runas
   become_user: System
