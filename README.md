@@ -10,7 +10,7 @@ The role has a modular structure, which makes it easy to customize the desired r
 ## Get started
 
 - [Get Pre-Process W10](https://github.com/getsueineko/Ansible-Pre-Process-W10.git)
-- [Installation and Usage Guides](https://github.com/getsueineko/Ansible-Pre-Process-W10#installation-and-usage)
+- [Installation and Usage](https://github.com/getsueineko/Ansible-Pre-Process-W10#installation-and-usage)
 
 ## Installation and Usage
 
@@ -30,7 +30,7 @@ The role has a modular structure, which makes it easy to customize the desired r
 6.  _Install-Win-BasicFeatures.yml_ - Install basic features like - NetFx3, LegacyComponents, Directplay, TelnetClient, TFTP
 7.  _Install-OpenSSH.yml_ - Install OpenSSH (server and client)
 8.  _Uninstall-Wordpad-MSPaint.yml_ - Uninstall some legacy components like Wordpad and MSPaint
-9.  _Install-MSEdge.yml_ - Install MSEdge (for old win10 releases)
+9.  _Install-MSEdge-(old).yml_ - Install MSEdge (for old win10 releases)
 10. _Install-Fonts-(curl).yml_ - Install some useful fonts
 11. _Customize-Prompt.yml_ - Customize Prompt (powershell and cmd)
 12. _Install-Office-(curl).yml_ - Install Office (default - 2016)
