@@ -13,7 +13,10 @@ The role has a modular structure, which makes it easy to customize the desired r
 - [Installation and Usage Guides](link)
 
 ## Installation and Usage
-
+1. ```git clone https://github.com/getsueineko/Ansible-Pre-Process-W10.git```
+2. Modify inventory file ```nano inventory.yml```
+3. Modify tasks for run via ```nano '.\Pre-Process W10\roles\common\tasks\Main.yml'```
+4. Run ansible-playbook pre-process.yml -vvv
 
 ---
 
