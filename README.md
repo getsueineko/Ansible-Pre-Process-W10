@@ -49,4 +49,4 @@ TODO List:
 
 ## License
 
-Pre-Process W10 is distributed under [AGPL-3.0-only](LICENSE).
+Pre-Process W10 is distributed under [GNU GPL 3](LICENSE).
