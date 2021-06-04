@@ -3,10 +3,11 @@
 - name: Adding chocolatey and PowerShellGet as trusted PackageSources and installing oh-my-posh and Get-ChildItemColor
   win_shell: |
     Set-ExecutionPolicy RemoteSigned -Force
+    Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
     Install-PackageProvider chocolatey
     Set-PackageSource -Name chocolatey -Trusted
-    Install-PackageProvider PowerShellGet
-    Set-PackageSource -Name PowerShellGet -Trusted
+    Install-PackageProvider PowerShellGet -Force
+    Set-PackageSource -Name PSGallery -Trusted
     Install-Module oh-my-posh -Scope AllUsers
     Install-Module -AllowClobber Get-ChildItemColor -Scope AllUsers -Force
   become: yes
