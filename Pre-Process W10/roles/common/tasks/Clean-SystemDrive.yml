@@ -4,3 +4,4 @@
   win_shell: |
     Set-Volume -DriveLetter C -NewFileSystemLabel "System"
     Get-Item C:\* -Force -Exclude Program*, *.sys, *Bin, Docum*, Post*, too*, User*, Window*, System*, Recov*, bootmgr | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
+  ignore_errors: true
