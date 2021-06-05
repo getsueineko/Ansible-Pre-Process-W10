@@ -1,11 +1,11 @@
 ---
 # This playbook sets default file associations
-- name: Check that the defaultassociations.xml exists
+- name: Check that the DefaultFileAssociations.xml exists
   win_stat: 
-    path: C:\PostInstall\defaultassociations.xml
+    path: C:\PostInstall\DefaultFileAssociations.xml
   register: stat_file
   
 - name: Set Default File Associations
   win_shell: |
-    dism /online /Import-DefaultAppAssociations:"C:\PostInstall\defaultassociations.xml"
+    dism /online /Import-DefaultAppAssociations:"C:\PostInstall\DefaultFileAssociations.xml"
   when: stat_file.stat.exists == True
