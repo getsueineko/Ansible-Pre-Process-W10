@@ -62,10 +62,10 @@
     .\update.bat
   ignore_errors: true
 
-- name: Enable WinDefenderRealtimeMonitoring
-  win_shell: |
-    Set-MpPreference -DisableRealtimeMonitoring $false
-  ignore_errors: true
+#- name: Enable WinDefenderRealtimeMonitoring
+#  win_shell: |
+#    Set-MpPreference -DisableRealtimeMonitoring $false
+#  ignore_errors: true
 
 - name: Clean temp files
   win_shell: |
