@@ -24,7 +24,7 @@
 - name: Install Fonts
   win_shell: |
     cd C:\Temp\Fonts
-    .\Font-Install.ps1 -pcName $env:COMPUTERNAME -fontFolder "C:\Temp\Fonts"
+    .\Font-Install.ps1
   ignore_errors: true
 
 - name: Clean temp files
