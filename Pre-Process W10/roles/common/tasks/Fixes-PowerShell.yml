@@ -1,15 +1,29 @@
 ---
 # This playbook fixes PSReadLine module and disables POWERSHELL_TELEMETRY
-- name: Fix  PSReadLine module and disable POWERSHELL_TELEMETRY
-  win_shell: |
-    Set-ExecutionPolicy RemoteSigned -Force
-    Remove-Module PSReadLine
-    Remove-Item 'C:\Program Files\WindowsPowerShell\Modules\PSReadLine' -Force -Recurse
-    Install-Module -Name PSReadLine -RequiredVersion 2.2.0-beta3 -Scope AllUsers -Force
-  become: yes
-  become_method: runas
-  become_user: System
-  ignore_errors: true
-    
+- name: Fix PSReadLine module and disable POWERSHELL_TELEMETRY
+  win_psmodule:
+    name: PSReadline
+    state: absent
+
+- name: Delete folder of PSReadLine
+  win_file:
+    path: C:\Program Files\WindowsPowerShell\Modules\PSReadLine
+    state: absent	
+
+- name: Install Module PSReadLine
+  win_psmodule:
+    name: PSReadLine
+    required_version: "2.2.0-beta3"
+    allow_prerelease: yes
+    skip_publicsher_check: yes
+    state: present
+
+- name: Upgrade Module Get-ChildItem
+  win_psmodule:
+    name: Get-ChildItemColor
+    allow_clobber: yes
+    skip_publicsher_check: yes
+    state: present
+       
 - name: Disable POWERSHELL_TELEMETRY
   raw: setx /M POWERSHELL_TELEMETRY_OPTOUT 1
