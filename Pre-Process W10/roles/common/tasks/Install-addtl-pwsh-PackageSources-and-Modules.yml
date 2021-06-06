@@ -4,7 +4,7 @@
   win_shell: |
     Set-ExecutionPolicy Unrestricted -Force
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-PackageProvider chocolatey
+    Install-PackageProvider chocolatey -Force
     Set-PackageSource -Name chocolatey -Trusted
     Install-PackageProvider PowerShellGet -Force
     Set-PackageSource -Name PSGallery -Trusted
