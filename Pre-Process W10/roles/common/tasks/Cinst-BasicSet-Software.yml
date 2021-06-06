@@ -57,9 +57,15 @@
 
 - name: Install RDPWrapper
   win_shell: |
-    cd C:\Temp\RDPWrapper
+    sl C:\Temp\RDPWrapper
     .\RDPWInst.exe -i -o
     .\update.bat
+  ignore_errors: true
+  
+- name: Install 
+  win_shell: |
+    sl C:\PostInstall
+    .\0008-64bit_Win7_Win8_Win81_Win10_R281.exe /s
   ignore_errors: true
 
 #- name: Enable WinDefenderRealtimeMonitoring
