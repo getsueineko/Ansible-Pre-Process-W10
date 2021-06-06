@@ -9,7 +9,7 @@
     Install-PackageProvider PowerShellGet -Force
     Set-PackageSource -Name PSGallery -Trusted
 
-- name: Install Module Get-ChildItem
+- name: Install Module oh-my-posh
   win_psmodule:
     name: oh-my-posh
     state: present
