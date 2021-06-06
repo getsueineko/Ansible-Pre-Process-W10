@@ -18,15 +18,19 @@
   - honeyview
   - mpv
   - youtube-dl
-  - paint.net
+  - 'paint.net'
   - googlechrome
   register: command_result
 
 - name: Fix for broken sequential install
   win_shell: |
-    choco install directx dotnetfx vcredist140 choco-cleaner ffmpeg curl 7zip powershell-core adobereader mpc-be honeyview mpv youtube-dl paint.net googlechrome -y
+    cinst directx dotnetfx vcredist140 choco-cleaner ffmpeg curl 7zip powershell-core adobereader mpc-be honeyview mpv youtube-dl paint.net googlechrome -y
   when: 
     - '"not installed" in command_result'
+    
+- name: Choco Pin paint.net for non update because too slow update on old PC
+  win_shell: |
+    choco pin add -n="'paint.net'"
 
 - name: Obtain information about the folder Temp
   win_stat:
