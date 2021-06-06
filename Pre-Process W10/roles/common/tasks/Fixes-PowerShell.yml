@@ -1,6 +1,6 @@
 ---
 # This playbook fixes PSReadLine module and disables POWERSHELL_TELEMETRY
-- name: Fix PSReadLine module and disable POWERSHELL_TELEMETRY
+- name: Remove Module PSReadLine
   win_psmodule:
     name: PSReadline
     state: absent
