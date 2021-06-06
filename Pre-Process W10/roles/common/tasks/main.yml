@@ -1,6 +1,7 @@
 - include: Install-addtl-pwsh-PackageSources-and-Modules.yml
 - include: Fixes-PowerShell.yml
 - include: Disable-ReservedStorage.yml
+- include: Pull-PostInstall-Folder-(curl).yml
 - include: Install-Chocolatey.yml
 - include: Cinst-BasicSet-Software.yml
 - include: Install-Win-BasicFeatures.yml
@@ -10,7 +11,6 @@
 - include: Install-Fonts-(curl).yml
 - include: Customize-Prompt.yml
 - include: Install-Office-(curl).yml
-- include: Pull-PostInstall-Folder-(curl).yml
 - include: Pin-StartMenu-Apps.yml
 - include: Set-Default-FileAssociations.yml
 - include: Setup-Powercfg-Modes.yml
