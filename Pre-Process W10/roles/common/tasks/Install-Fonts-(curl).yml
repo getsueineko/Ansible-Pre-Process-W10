@@ -23,7 +23,7 @@
 
 - name: Install Fonts
   win_shell: |
-    sl C:\Temp\Fonts
+    sl C:\Temp
     Unblock-File .\Font-Install.ps1
     .\Font-Install.ps1
   ignore_errors: true
@@ -32,3 +32,4 @@
   win_shell: |
     Remove-Item "C:\Temp\Fonts" -Force -Recurse -ErrorAction SilentlyContinue
     Remove-Item "C:\Temp\Fonts.zip" -Force -ErrorAction SilentlyContinue
+    Remove-Item "C:\Temp\Font-Install.ps1" -Force -ErrorAction SilentlyContinue
