@@ -1,9 +1,8 @@
 ---
 # This playbook fixes PSReadLine module and disables POWERSHELL_TELEMETRY
 - name: Remove Module PSReadLine
-  win_psmodule:
-    name: PSReadline
-    state: absent
+  win_shell: |
+    Uninstall-Module -Name PSReadLine -Force
 
 - name: Delete folder of PSReadLine
   win_file:
