@@ -9,8 +9,19 @@ The role has a modular structure, which makes it easy to customize the desired r
 
 ## Get started
 
+- [System requirements](https://github.com/getsueineko/Ansible-Pre-Process-W10#System-requirements)
 - [Get Pre-Process W10](https://github.com/getsueineko/Ansible-Pre-Process-W10.git)
 - [Installation and Usage](https://github.com/getsueineko/Ansible-Pre-Process-W10#installation-and-usage)
+
+## System requirements
+
+Control Server:
+1. Python3
+2. ```pip install ansible```
+3. ```pip install pywinrm[credssp]```
+
+Сontrolled Host:
+1. ```[ConfigureRemotingForAnsible.ps1 -EnableCredSSP](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#winrm-setup)```
 
 ## Installation and Usage
 
