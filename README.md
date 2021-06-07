@@ -15,12 +15,12 @@ The role has a modular structure, which makes it easy to customize the desired r
 
 ## System requirements
 
-Control Server:
+Control Server (Windows, Linux, macOS):
 1. Python3
 2. ```pip install ansible```
 3. ```pip install pywinrm[credssp]```
 
-Сontrolled Host:
+Сontrolled Host (Windows 10):
 1. ```ConfigureRemotingForAnsible.ps1 -EnableCredSSP```  
 Details [WinRM Setup](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#winrm-setup)
 
