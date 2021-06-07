@@ -23,7 +23,7 @@
 
 - name: Install Fonts
   win_shell: |
-    sl C:\Temp
+    sl C:\Temp\Fonts
     Unblock-File .\Font-Install.ps1
     .\Font-Install.ps1
   ignore_errors: true
