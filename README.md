@@ -21,7 +21,7 @@ Control Server:
 3. ```pip install pywinrm[credssp]```
 
 Сontrolled Host:
-1. ```[ConfigureRemotingForAnsible.ps1 -EnableCredSSP](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#winrm-setup)```
+1. ```ConfigureRemotingForAnsible.ps1 -EnableCredSSP```[WinRM Setup](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html#winrm-setup)
 
 ## Installation and Usage
 
