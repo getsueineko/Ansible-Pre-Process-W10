@@ -7,6 +7,8 @@ The Ansible-Role allows you to perform a series of post-installation manipulatio
 
 The role has a modular structure, which makes it easy to customize the desired result, or continue to modify it for yourself.
 
+![playbook](https://user-images.githubusercontent.com/14312837/121787062-ab249380-cbcc-11eb-8708-83bd2055507d.png)
+
 ## Get started
 
 - [System requirements](https://github.com/getsueineko/Ansible-Pre-Process-W10#System-requirements)
