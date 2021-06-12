@@ -32,4 +32,3 @@
   win_shell: |
     Remove-Item "C:\Temp\Fonts" -Force -Recurse -ErrorAction SilentlyContinue
     Remove-Item "C:\Temp\Fonts.zip" -Force -ErrorAction SilentlyContinue
-    Remove-Item "C:\Temp\Font-Install.ps1" -Force -ErrorAction SilentlyContinue
