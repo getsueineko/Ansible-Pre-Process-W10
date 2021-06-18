@@ -11,10 +11,10 @@ The role has a modular structure, which makes it easy to customize the desired r
   <img src=https://user-images.githubusercontent.com/14312837/121787090-ce4f4300-cbcc-11eb-8701-7a1ccc5c8145.png?raw=true" alt="playbook"/>
 </p>
 
-ok - the value of the set variable on the host matches the value in the playbook.
-changed - the value of the specified variable on the host did not match the value in the playbook and was changed.
-failed - the specified variable cannot be changed.
-skipped - checking the value of the specified variable is skipped.                                                                                                              
+ok - the value of the set variable on the host matches the value in the playbook.  
+changed - the value of the specified variable on the host did not match the value in the playbook and was changed.  
+failed - the specified variable cannot be changed.  
+skipped - checking the value of the specified variable is skipped.                                                                                                               
                                                                                                                                          
 ## Get started
 
