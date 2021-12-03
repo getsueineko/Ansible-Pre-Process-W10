@@ -17,14 +17,14 @@
   - mpc-be
   - honeyview
   - mpv
-  - youtube-dl
+  - yt-dlp
   - 'paint.net'
   - googlechrome
   register: command_result
 
 - name: Fix for broken sequential install
   win_shell: |
-    cinst directx dotnetfx vcredist140 choco-cleaner ffmpeg curl 7zip powershell-core adobereader mpc-be honeyview mpv youtube-dl paint.net googlechrome -y
+    cinst directx dotnetfx vcredist140 choco-cleaner ffmpeg curl 7zip powershell-core adobereader mpc-be honeyview mpv yt-dlp paint.net googlechrome -y
   when: 
     - '"not installed" in command_result'
     
