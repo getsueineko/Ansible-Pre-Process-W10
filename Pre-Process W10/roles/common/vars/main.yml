@@ -4,3 +4,5 @@ w10key: !vault |
 o16key: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           # result of command ansible-vault encrypt_string "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+          
+paint-version: '4.3.7'
