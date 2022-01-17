@@ -37,7 +37,7 @@ Details [WinRM Setup](https://docs.ansible.com/ansible/latest/user_guide/windows
 1. Get all files: ```git clone https://github.com/getsueineko/Ansible-Pre-Process-W10.git```
 2. Modify inventory file: ```nano inventory.yml```
 3. Modify var file for access to target host: ```nano /group_vars/all.yml```
-4. Modify tasks for run: ```nano /Pre-Process W10/roles/common/tasks/Main.yml'```
+4. Modify tasks for run: ```nano /Pre-Process W10/roles/common/tasks/Main.yml'```  
 [Optional] Check target hosts availability: ```ansible target_host -m win_ping```                                                                                                5. Run ```ansible-playbook pre-process.yml -v```, where number of v is extent of details output: -v - less details, -vv - more details, -vvv - very details
 
 ## The brief description of the tasks:
